@@ -95,6 +95,9 @@ const translations = {
     // Gallery
     'selected_count': 'محدد',
     'generated_on': 'تم الإنشاء في',
+    'your_creations': 'إبداعاتك',
+    'ready_to_create': 'مستعد لصنع السحر؟',
+    'enter_description_above': 'أدخل وصفاً أعلاه وشاهد الذكاء الاصطناعي يحول أفكارك إلى حقيقة',
   },
   en: {
     // Header
@@ -180,6 +183,9 @@ const translations = {
     // Gallery
     'selected_count': 'selected',
     'generated_on': 'Generated on',
+    'your_creations': 'Your Creations',
+    'ready_to_create': 'Ready to create magic?',
+    'enter_description_above': 'Enter a description above and watch AI turn your ideas into reality',
   }
 };
 

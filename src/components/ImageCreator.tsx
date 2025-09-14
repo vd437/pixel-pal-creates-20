@@ -515,7 +515,7 @@ const ImageCreator = () => {
         {generatedImages.length > 0 && showGallery && (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-foreground">{language === 'ar' ? 'إبداعاتك' : 'Your Creations'} ({generatedImages.length})</h2>
+              <h2 className="text-2xl font-bold text-foreground">{t('your_creations')} ({generatedImages.length})</h2>
               <div className="flex items-center gap-2">
                 {selectedImages.size > 0 && (
                   <Button
@@ -594,13 +594,14 @@ const ImageCreator = () => {
                         {image.prompt}
                       </p>
                       <p className="text-xs text-muted-foreground/70 mt-2">
-                        {t('generated_on')} {image.timestamp.toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US', {
+                        {t('generated_on')} {new Intl.DateTimeFormat(language === 'ar' ? 'ar-EG' : 'en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric',
                           hour: '2-digit',
-                          minute: '2-digit'
-                        })}
+                          minute: '2-digit',
+                          calendar: 'iso8601'
+                        }).format(image.timestamp)}
                       </p>
                     </div>
                   </CardContent>
@@ -616,10 +617,10 @@ const ImageCreator = () => {
             <CardContent className="p-12 text-center">
               <Wand2 className="w-16 h-16 text-muted-foreground/50 mx-auto mb-4 animate-float" />
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                مستعد لصنع السحر؟
+                {t('ready_to_create')}
               </h3>
               <p className="text-muted-foreground">
-                أدخل وصفاً أعلاه وشاهد الذكاء الاصطناعي يحول أفكارك إلى حقيقة
+                {t('enter_description_above')}
               </p>
             </CardContent>
           </Card>
